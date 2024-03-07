@@ -1,19 +1,15 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
-
-/*
- * main - Entry Point
- * Return Always (Success)
+/**
+ * main - represent Entry Point to the program
+ *
+ * Return: 0 to stop the program
  */
-
 int main(void)
-
 {
-        char a;
+char a;
 
-        for(a = 'a' ; a <= 'z' ; a++)
-        putchar (a);
-        putchar ('\n');
-        return (0);
+for (a = 'a'; a <= 'z' ; a++)
+putchar(a);
+putchar('\n');
+return (0);
 }
