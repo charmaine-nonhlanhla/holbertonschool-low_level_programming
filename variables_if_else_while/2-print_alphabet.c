@@ -3,12 +3,17 @@
 #include <time.h>
 
 /*
- * main - Entry point
- * Return: Always character
+ * main - Entry Point
+ * Return Always (Success)
  */
 
-char main(void)
+int main(void)
+
 {
-	char ('a');
+        char a;
 
-
+        for(a = 'a' ; a <= 'z' ; a++)
+        putchar (a);
+        putchar ('\n');
+        return (0);
+}
