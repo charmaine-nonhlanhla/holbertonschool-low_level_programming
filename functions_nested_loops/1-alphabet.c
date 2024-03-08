@@ -6,7 +6,8 @@ int _putchar(char c);
  *
  * Return: Always 0 (Succes)
  */
-void print_alphabet(void)
+void print_alphabet(void);
+int main(void);
 {
 	int n;
 
