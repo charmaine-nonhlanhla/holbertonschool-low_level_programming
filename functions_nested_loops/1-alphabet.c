@@ -1,11 +1,8 @@
 #include "main.h"
+
+/* Declaration of _putchar function */
 int _putchar(char c);
 
-/**
- * main - check the code
- *
- * Return: Always 0.
- */
 int main(void)
 {
     print_alphabet();
