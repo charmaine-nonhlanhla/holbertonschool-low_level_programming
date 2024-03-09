@@ -1,5 +1,5 @@
 #include "main.h"
-int _putchar(char c);
+int putchar(char c);
 
 /**
  * print_alphabet - a function that prints the alphabet, in lowercase
@@ -13,7 +13,7 @@ int main(void);
 
 	for (n = 'a'; n <= 'z'; n++)
 	{
-		_putchar(n);
+		putchar(n);
 	}
-	_putchar('\n');
+	putchar('\n');
 }
