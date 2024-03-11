@@ -1,18 +1,15 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- * main - check the code.
- *
- * Return: Always 0.
+ *_isupper - checks for an uppercase character
+ *@c: Character that will be chcecked
+ *Return: 1 if character is uppercase else 0
  */
-int main(void)
+int _isupper(int c)
 {
-    char c;
+	if (c >= 'A' && c <= 'Z')
+		return (1);
 
-    c = 'A';
-    printf("%c: %d\n", c, _isupper(c));
-    c = 'a';
-    printf("%c: %d\n", c, _isupper(c));
-    return (0);
+	else
+		return (0);
 }
