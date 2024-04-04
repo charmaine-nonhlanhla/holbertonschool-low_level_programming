@@ -1,44 +1,45 @@
-/*
- * File: 2-str_concat.c
- * Auth: Charmaine Mogotlane
- */
-
-#include "holberton.h"
+#include "main.h"
+#include <stdio.h>
 #include <stdlib.h>
 
 /**
- * str_concat - Concatenates two strings.
- * @s1: The string to be concatenated upon.
- * @s2: The string to be concatenated to s1.
- *
- * Return: If concatenation fails - NULL.
- *         Otherwise - a pointer the newly-allocated space in memory
- *                     containing the concatenated strings.
+ * str_concat - concatenates two strings
+ * @s1: string 1
+ * @s2: string 2
+ * Return: pointer to concatenated string
  */
+
 char *str_concat(char *s1, char *s2)
 {
-	char *concat_str;
-	int index, concat_index = 0, len = 0;
+	char *concat;
+	int len1 = 0, len2 = 0, i = 0, j = 0;
 
 	if (s1 == NULL)
 		s1 = "";
-
 	if (s2 == NULL)
 		s2 = "";
+	while (*(s1 + i))
+		len1++, i++;
+	while (*(s2 + j))
+		len2++, j++;
+	len2++; /* add null terminator to length */
 
-	for (index = 0; s1[index] || s2[index]; index++)
-		len++;
+	concat = malloc(sizeof(char) * (len1 + len2)); /*alloc memory*/
 
-	concat_str = malloc(sizeof(char) * len);
-
-	if (concat_str == NULL)
+	if (concat == NULL) /* validate memory */
 		return (NULL);
 
-	for (index = 0; s1[index]; index++)
-		concat_str[concat_index++] = s1[index];
+	i = 0, j = 0;
+	while (i < len1) /* concatenate */
+	{
+		*(concat + i) = *(s1 + i);
+		i++;
+	}
+	while (j < len2)
+	{
+		*(concat + i) = *(s2 + j);
+		i++, j++;
+	}
 
-	for (index = 0; s2[index]; index++)
-		concat_str[concat_index++] = s2[index];
-
-	return (concat_str);
+	return (concat);
 }
